@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ZAKIYA ORDER — Caster & Room Tournament</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:#fff;background:#050b16;background-image:linear-gradient(rgba(2,7,17,.78),rgba(2,7,17,.94)),url('background.png');background-size:cover;background-position:center top;background-attachment:fixed}.wrap{max-width:1050px;margin:auto;padding:20px}.nav{position:sticky;top:0;z-index:5;background:rgba(3,9,20,.82);backdrop-filter:blur(12px);border-bottom:1px solid #244d7e}.navin{max-width:1050px;margin:auto;padding:18px 20px;display:flex;justify-content:space-between}.logo{font-weight:900;letter-spacing:2px}.logo span{color:#58aaff}.hero{text-align:center;padding:100px 20px 70px}.kicker{color:#69b5ff;letter-spacing:6px;font-size:13px;font-weight:bold}.hero h1{font-size:clamp(48px,9vw,92px);line-height:.9;margin:18px 0;text-shadow:0 0 30px #176bc0}.hero p{max-width:650px;margin:auto;color:#c2cfdf;line-height:1.7}.btn{border:1px solid #69b7ff;border-radius:30px;padding:13px 25px;background:#0c396e;color:white;font-weight:bold;cursor:pointer;box-shadow:0 0 22px #176bc066}.hero .btn{margin-top:25px}.section{padding:45px 0}.head{text-align:center;margin-bottom:25px}.head h2{font-size:32px}.head p{color:#9eacc0}.cards{display:grid;grid-template-columns:1fr 1fr;gap:20px}.card{background:#071427e8;border:1px solid #326aa3;border-radius:22px;padding:28px;box-shadow:0 0 28px #176bc044}.icon{font-size:34px}.card h3{font-size:27px}.card p{color:#b8c6d8;line-height:1.6}.features{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:18px 0}.feature{padding:11px;background:#ffffff09;border-radius:10px;font-size:13px;color:#c9d7e9}.form{display:none;border-top:1px solid #ffffff22;margin-top:20px;padding-top:12px}.form.on{display:block}label{display:block;font-size:13px;font-weight:bold;margin:12px 0 6px}input,select,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid #2b4d72;background:#06101f;color:#fff}textarea{min-height:75px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.total{display:flex;justify-content:space-between;margin:15px 0;padding:14px;background:#0b2b4f;border-radius:10px}.why{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.why div{padding:18px;text-align:center;background:#071427e8;border:1px solid #ffffff14;border-radius:15px}.why span{font-size:12px;color:#9eacc0}.small{font-size:12px;color:#8190a4}.footer{border-top:1px solid #244d7e;padding:30px 20px;margin-top:40px}.footin{max-width:1050px;margin:auto;display:flex;justify-content:space-between}@media(max-width:750px){.cards{grid-template-columns:1fr}.why{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}.footin{display:block}.navlinks{display:none}}
+</style>
+</head>
+<body>
+<div class="nav"><div class="navin"><div class="logo">ZAKIYA <span>ORDER</span></div><div class="navlinks">JASA CASTER &nbsp;•&nbsp; ROOM TOURNAMENT</div></div></div>
+
+<header class="hero">
+<div class="kicker">BOOKING & RESERVATION</div>
+<h1>ZAKIYA<br>ORDER</h1>
+<p>Pesan <b>Jasa Caster</b> atau <b>Sewa Room Tournament MLBB</b>. Isi detail pesanan dan lanjutkan langsung ke WhatsApp.</p>
+<button class="btn" onclick="document.getElementById('layanan').scrollIntoView({behavior:'smooth'})">PILIH LAYANAN →</button>
+</header>
+
+<section class="section" id="layanan"><div class="wrap">
+<div class="head"><h2>PILIH LAYANAN</h2><p>Pilih kebutuhan kamu di bawah.</p></div>
+<div class="cards">
+
+<div class="card"><div class="icon">🎙️</div><h3>JASA CASTER</h3>
+<p>Booking Zakiya Caster untuk scrim, tournament, live match, grand final, fun match, dan event komunitas.</p>
+<div class="features"><div class="feature">🎮 Tournament</div><div class="feature">⚔️ Scrim</div><div class="feature">📺 Live Match</div><div class="feature">🏆 Grand Final</div></div>
+<button class="btn" onclick="toggle('caster')">PESAN JASA CASTER →</button>
+<div class="form" id="caster">
+<div class="grid"><div><label>Nama</label><input id="c_name"></div><div><label>Nama Event</label><input id="c_event"></div></div>
+<label>Jenis Event</label><select id="c_type"><option>Scrim</option><option>Tournament</option><option>Grand Final</option><option>Fun Match</option><option>Live Match</option><option>Lainnya</option></select>
+<div class="grid"><div><label>Tanggal</label><input id="c_date" type="date"></div><div><label>Jam Mulai</label><input id="c_time" type="time"></div></div>
+<label>Durasi</label><select id="c_duration"><option>1 Jam</option><option>2 Jam</option><option>3 Jam</option><option>4 Jam</option><option>Custom</option></select>
+<label>Platform</label><select id="c_platform"><option>TikTok</option><option>YouTube</option><option>Facebook</option><option>Discord / Private</option></select>
+<label>Catatan</label><textarea id="c_note" placeholder="BO3/BO5, jumlah match, request khusus, dll."></textarea>
+<button class="btn" onclick="caster()">KIRIM VIA WHATSAPP</button>
+</div></div>
+
+<div class="card"><div class="icon">🎮</div><h3>SEWA ROOM TOURNAMENT</h3>
+<p>Pesan custom room MLBB untuk tournament, scrim, mabar, fun match, atau kebutuhan komunitas.</p>
+<div class="features"><div class="feature">🔐 Custom Room</div><div class="feature">🏆 Tournament</div><div class="feature">⚡ Proses Cepat</div><div class="feature">📅 Booking Jadwal</div></div>
+<button class="btn" onclick="toggle('room')">PESAN ROOM TOURNAMENT →</button>
+<div class="form" id="room">
+<div class="grid"><div><label>Nama</label><input id="r_name"></div><div><label>Nama Team / Event</label><input id="r_team"></div></div>
+<div class="grid"><div><label>Tanggal</label><input id="r_date" type="date"></div><div><label>Jam Mulai</label><input id="r_time" type="time"></div></div>
+<label>Jumlah Match</label><select id="r_matches" onchange="roomTotal()"><option value="15000">1 Match — Rp15.000</option><option value="30000">2 Match — Rp30.000</option><option value="45000">3 Match — Rp45.000</option><option value="60000">4 Match — Rp60.000</option><option value="75000">5 Match — Rp75.000</option></select>
+<div class="total"><span>Estimasi Total</span><b id="rt">Rp15.000</b></div>
+<label>Catatan</label><textarea id="r_note"></textarea>
+<button class="btn" onclick="room()">KIRIM VIA WHATSAPP</button>
+</div></div>
+
+</div></div></section>
+<section class="section"><div class="wrap"><div class="head"><h2>CARA ORDER</h2><p>4 langkah sederhana.</p></div><div class="why"><div>1️⃣<b>Pilih</b><br><span>Caster / Room</span></div><div>2️⃣<b>Isi</b><br><span>Detail pesanan</span></div><div>3️⃣<b>Kirim</b><br><span>WhatsApp otomatis</span></div><div>4️⃣<b>Konfirmasi</b><br><span>Admin cek jadwal</span></div></div></div></section>
+<footer class="footer"><div class="footin"><div><b>ZAKIYA ORDER</b><br><span class="small">Jasa Caster & Room Tournament MLBB</span></div><div class="small">WhatsApp: <span id="wa"></span></div></div></footer>
+
+<script>
+/* =========================
+   CONFIG — EDIT DI SINI
+   ========================= */
+const ADMIN_WA="6281234567890"; // GANTI nomor WhatsApp kamu
+const BUSINESS_NAME="ZAKIYA ORDER";
+
+document.getElementById("wa").textContent=ADMIN_WA.replace("62","+62 ");
+function rupiah(n){return new Intl.NumberFormat("id-ID",{style:"currency",currency:"IDR",maximumFractionDigits:0}).format(n)}
+function toggle(id){document.getElementById(id).classList.toggle("on")}
+function valid(ids){for(const id of ids){if(!document.getElementById(id).value.trim()){alert("Mohon lengkapi data terlebih dahulu.");document.getElementById(id).focus();return false}}return true}
+function caster(){if(!valid(["c_name","c_event","c_date","c_time"]))return;let m=`Halo ${BUSINESS_NAME} 👋
+
+Saya ingin booking JASA CASTER.
+
+Nama: ${c_name.value}
+Nama Event: ${c_event.value}
+Jenis Event: ${c_type.value}
+Tanggal: ${c_date.value}
+Jam: ${c_time.value}
+Durasi: ${c_duration.value}
+Platform: ${c_platform.value}
+Catatan: ${c_note.value||"-"}
+
+Mohon konfirmasi ketersediaan dan harga. Terima kasih!`;window.open("https://wa.me/"+ADMIN_WA+"?text="+encodeURIComponent(m),"_blank")}
+function roomTotal(){rt.textContent=rupiah(Number(r_matches.value))}
+function room(){if(!valid(["r_name","r_team","r_date","r_time"]))return;let m=`Halo ${BUSINESS_NAME} 👋
+
+Saya ingin booking SEWA ROOM TOURNAMENT.
+
+Nama: ${r_name.value}
+Nama Team/Event: ${r_team.value}
+Tanggal: ${r_date.value}
+Jam: ${r_time.value}
+Jumlah Match: ${r_matches.options[r_matches.selectedIndex].text}
+Estimasi Total: ${rupiah(Number(r_matches.value))}
+Catatan: ${r_note.value||"-"}
+
+Mohon konfirmasi ketersediaan room. Terima kasih!`;window.open("https://wa.me/"+ADMIN_WA+"?text="+encodeURIComponent(m),"_blank")}
+</script>
+</body>
+</html>
